@@ -62,6 +62,7 @@ You've already been introduced to numeric arrays through your work with scalars,
   - OR add and commit all at once: ```git commit -a -m '<enter info on what has changed>'```
   
 ### C5. Push changes to a Github repository
+- Ensure that you have permissions to write to the Github repository (must be done in Github)
 - Push changes to a connected Github repository: ```git push origin master```
   - In this example -- which is the default case -- **origin** specifies the remote (i.e. Github) repository that is the target of your 'push'. **master** specifies the branch of the git repository that you're working on as the source data.
 - Check if there are connected remote repositories: ```git remote -v```
