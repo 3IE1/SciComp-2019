@@ -32,7 +32,7 @@ MATLAB provides for a number of different variable types to be used. Typically, 
 - **objects** (user classes and java classes)  
 
 Below, you'll learn a bit more about basic array types.
-####Numeric arrays
+#### Numeric arrays
 You've already been introduced to numeric arrays through your work with scalars, vectors and matrices. 
 
 1. Create a character array using a string of characters. example: 
@@ -62,8 +62,15 @@ You've already been introduced to numeric arrays through your work with scalars,
   - OR add and commit all at once: ```git commit -a -m '<enter info on what has changed>'```
   
 ### C5. Push changes to a Github repository
-- ```git push origin master```
-  - In the above example, 
+- Push changes to a connected Github repository: ```git push origin master```
+  - In this example -- which is the default case -- **origin** specifies the remote (i.e. Github) repository that is the target of your 'push'. **master** specifies the branch of the git repository that you're working on as the source data.
+- Check if there are connected remote repositories: ```git remote -v```
+
+### C6. Pull changes 
+- If others have pushed changes to the Github repository, you need to **pull** the changes to sync your local directory
+- Pull changes: ```git pull origin master```
+  - git **pull** actually runs two processes: **fetch** (get changes) and **merge** (place in your directory) 
+- You can check changes (before merging them) with: ```git fetch``` ```git diff origin master```
 
 ## D. Learning through examples
 
