@@ -40,7 +40,30 @@ You've already been introduced to numeric arrays through your work with scalars,
 2. 
 #### Character arrays
 
-## C. Introduction to Github
+## C. Introduction to [git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and Github
+### C1. Setting up your git account ([git documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)):
+- Set your name: ```git config --global user.name "John Doe"```
+- Set your email address: ```git config --global user.email johndoe@example.com```
+- Check your settings ```git config --list```
+
+### C2. How git works
+![alt text](https://git-scm.com/book/en/v2/images/lifecycle.png "git workflow")
+
+### C3. Cloning a repository (from Github)
+- Find a repository of interest on Github; Click the **Clone or download** button; Copy the url provided
+- In git, navigate to the directory where you want to clone (download) the repository contents.
+- Clone a repository: ```git clone https://github.com/3IE1/SciComp-2019.git``` (replace with proper url)
+
+### C4. Checking status, adding and committing changes
+- Check status (i.e. what's been modified): ```git status```
+- Add items to the list of tracked files (individually): ```git add <filename>```
+  - OR Add all items to this list of tracked files: ```git add --all```
+- Commit changes to git (i.e. record changes): ```git commit -m '<enter info on what has changed>'```
+  - OR add and commit all at once: ```git commit -a -m '<enter info on what has changed>'```
+  
+### C5. Push changes to a Github repository
+- ```git push origin master```
+  - In the above example, 
 
 ## D. Learning through examples
 
