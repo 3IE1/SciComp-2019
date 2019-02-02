@@ -158,7 +158,8 @@ Functions are called by using their name and the output/input format specified a
 1. Brainstorm with your peers some questions that could be explored in these datasets, e.g.:
   - In Toronto during July of 2005, how many days had a maximum temperature above 25 degrees? 
   - How much snowfall did Calgary receive in each year?  
-  - which city has the highest day-to-day temperature ranges (or swings)? 
+  - Which city has the highest day-to-day temperature ranges (or swings)?
+  - What are the monthly mean temperatures for each city?
 2. Collaborate with your peers to figure out how to perform the analysis.
 
 ### C3. Plotting and visualizing data
@@ -190,9 +191,13 @@ plot(Calgary.data(:,7),'.','Color',[0.8 0.4 0.5]); % Can specify color as [Red G
 plot(Calgary.data(:,7),'s-','Color',[0.2 0.3 0.7],'MarkerEdgeColor',[1 0.1 0.1],'MarkerFaceColor',[0.4 0.7 0.2],'LineWidth',3 ); % Makes the line and dots red.
 ```
 #### Plotting multiple series on a figure
-Notice that each time you plot, you lose the previously plotted data. If you want to keep the previous plotted data, use the command:
-- ```hold on;```
-Now, a second series can be plotted on top of it:
+Notice that each time you plot, you lose the previously plotted data. If you want to keep the previous plotted data, use the command **hold on**. Now, a second series can be plotted on top of it:
+```
+clf; # clear the figure
+plot(Calgary.data(:,7),'.','Color',[0.8 0.4 0.5]);
+hold on;```
+plot(Toronto.data(:,7),'bx-');
+```
 
 1. Plot 
 %%% Exercise:
