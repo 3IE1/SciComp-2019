@@ -154,10 +154,187 @@ Functions are called by using their name and the output/input format specified a
     - Calgary.textdata contains any text values from the table
     - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
 
-### C2. Brainstorming questions to be explored
-- Q1. In Toronto during July of 2005, how many days had a maximum temperature above 25 degrees? 
-- Q2. How much snow 
+### C2. Creating a data analysis plan
+1. Brainstorm with your peers some questions that could be explored in these datasets, e.g.:
+  - In Toronto during July of 2005, how many days had a maximum temperature above 25 degrees? 
+  - How much snowfall did Calgary receive in each year?  
+  - which city has the highest day-to-day temperature ranges (or swings)? 
+2. Collaborate with your peers to figure out how to perform the analysis.
 
+### C3. Plotting and visualizing data
+To create a plot (or to bring up one that exists, use the **figure** command, 
+- e.g. ```figure(1) % This creates a blank figure (if figure 1 doesn't exist), or brings it back up (if it already has been made)```
+
+There are many [different plot types](https://www.mathworks.com/help/matlab/creating_plots/types-of-matlab-plots.html) that can be created.  The simplest is a line plot. To create it, use the **plot** command:
+- e.g. ```plot(Calgary.data(:,7)); %plots the seventh column of the table```
+
+By default, you get a line plot in blue, with no title or legend. You can customize virtually all parts of a figure:
+
+#### Line Type: 
+```
+plot(Calgary.data(:,7),'.');  % Plots Data points as dots instead of connected series
+plot(Calgary.data(:,7),'.-'); % Connected dots
+plot(Calgary.data(:,7),'--'); % Dashed line
+plot(Calgary.data(:,7),'o'); % Open Circles
+plot(Calgary.data(:,7),'s-'); % Connected Open Squares
+```
+#### Marker Color:
+```
+plot(Calgary.data(:,7),'r.-'); % Makes the line and dots red.
+plot(Calgary.data(:,7),'gp-'); % Green.
+plot(Calgary.data(:,7),'kx'); % Makes the 'x's red.
+plot(Calgary.data(:,7),'.','Color',[0.8 0.4 0.5]); % Can specify color as [Red Green Blue] from 0 to 1
+```
+#### Custom Marker and Line Colors
+```
+plot(Calgary.data(:,7),'s-','Color',[0.2 0.3 0.7],'MarkerEdgeColor',[1 0.1 0.1],'MarkerFaceColor',[0.4 0.7 0.2],'LineWidth',3 ); % Makes the line and dots red.
+```
+#### Plotting multiple series on a figure
+Notice that each time you plot, you lose the previously plotted data. If you want to keep the previous plotted data, use the command:
+- ```hold on;```
+Now, a second series can be plotted on top of it:
+
+1. Plot 
+%%% Exercise:
+% Let's use the 'randi' function to create 5 different sets of 
+% 600 random numbers between 1 and 100:
+rand_num = randi([1,100],600,5);
+
+plot(rand_num,'c.-'); % Plots a random series of 600 numbers between 1 and 100
+
+%%% Clearing a figure:  
+% Use the command 'clf' to clear the figure:
+clf; 
+plot(luck_num,'r.-'); % Makes the line and dots red.
+hold on;
+plot(rand_num(:,1),'c.-'); % Plots the first random series of 600 numbers between 1 and 100
+
+%%% Adding a Legend:
+% The 'legend' command adds a legend to the plot. The labels correspond to
+% the order of plotted series in your figure.
+legend('lucky numbers','random numbers');
+% You can specify the location of the legend on the figure by using the
+% 'Location' keyword, and then specifying a compass direction:
+legend('lucky numbers','random numbers','Location','NorthWest');
+
+%%% Title, X and Y labels,  Font Size
+% Set the title using the title command:
+title('Lucky and Random Numbers','FontSize',14);
+% 'FontSize' sets the weight of the font.
+
+% Set the x- and y-labels with the following Commands:
+xlabel('Sample Number','FontSize',14);
+ylabel('Number Value','FontSize',14);
+
+% Set the font size of the axes and the legend with:
+set(gca,'FontSize',14);
+
+% Let's replot this, with all the commands together, as figure 2:
+figure(2);clf;
+plot(luck_num,'r.-'); % Makes the line and dots red.
+hold on;
+plot(rand_num(:,1),'cx-'); % Plots a random series of 600 numbers between 1 and 100
+legend('lucky numbers','random numbers','Location','NorthWest');
+title('Lucky and Random Numbers','FontSize',14);
+xlabel('Sample Number','FontSize',14);
+ylabel('Number Value','FontSize',14);
+set(gca,'FontSize',14);
+
+%% Question
+% Does figure 2 tell us a whole lot about whether or not the 'lucky
+% numbers' are, in fact, random?  Why or why not?  What is the apparent
+% trend in the data?
+
+%%% Sorting 
+% Let's try sorting both sets of numbers from lowest to largest value
+% using the 'sort' command:
+
+%%% Figure Handles
+% Another way specify a figure is to assign it a variable name (you can
+% then recall this figure by referring to its variable name)
+f2b = figure(); 
+luck_num_sort = sort(luck_num);
+rand_num_sort = sort(rand_num);
+figure(f2b); clf;
+plot(luck_num_sort,'r.-','LineWidth',2); % Makes the line and dots red.
+hold on;
+% Let's plot all the random number series on top of our lucky numbers.  
+% Since we're not specifying a column to plot, MATLAB assumes that we want
+% to plot each column as a separate line.  It will give each its own color
+plot(rand_num_sort,'LineWidth',0.5);
+legend('LuckyNumbers','Random1','Random2','Random3','Random4','Random5','Location','NorthWest')
+title('Lucky and Random Numbers','FontSize',14);
+xlabel('Sample Number','FontSize',14);
+ylabel('Number Value','FontSize',14);
+set(gca,'FontSize',14);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 7b. Printing Figures:
+% Figures can be saved by either using the 'Save Figure' option in the
+% figure window, or by using the MATLAB function 'print'
+% Note that this will print whichever figure is currently active (last
+% selected).  We can make sure we save the right one by calling figure 2
+% again:
+figure(f2b)
+print('-dpng',[data_loc 'lucky_random_numbers']); % saves as .png
+print('-dtiff',[data_loc 'lucky_random_numbers']); % saves as .tiff
+print('-djpeg',[data_loc 'lucky_random_numbers']); % saves as .jpg
+% See 
+doc print % for more information about printing figures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% 7c) Other Types of plots.
+% There are many types of plots. Highlight either variable in Workspace,
+% and click the dropdown 'plot' menu above to see the different types of
+% plots available.
+
+%%% Closing figures:
+% You can close a figure by using the 'close' command:
+close(f2b);
+
+%%% Scatterplot:
+% Can be done similar to a line plot, except that you specify both x and y
+% values:
+figure(3);
+plot(rand_num(:,1),luck_num,'b.'); % Scatterplot between random (x) and lucky numbers (y)
+title('Random vs. Lucky Numbers','FontSize',14);
+xlabel('Random Numbers','FontSize',14);
+ylabel('Lucky Numbers','FontSize',14);
+set(gca,'FontSize',14);
+
+%%% Bar Graphs:
+% The command 'bar' is used to make a bar graph:
+% Let's make and compare histograms of the distribution of numbers in 
+% rand_num and luck_num to see if they are similar (use the 'histc'
+% command')
+doc histc;
+edges = (0:5:100)';
+% Do for Lucky Numbers:
+counts_lucky = histc(luck_num,edges);
+fbar_lucky = figure();
+bar(edges+2.5,counts_lucky);
+title('Histogram for Lucky Numbers','FontSize',14);
+xlabel('Value of Lucky Number','FontSize',14);
+ylabel('Count','FontSize',14);
+
+% Do for Random Numbers:
+counts_rand = histc(rand_num,edges);
+fbar_rand = figure();
+bar(edges+2.5,counts_rand);
+title('Histogram for Random Numbers','FontSize',14);
+xlabel('Value of Random Number','FontSize',14);
+ylabel('Count','FontSize',14);
+
+%%% Closing figures:
+% You can close a figure by using the 'close' command:
+close(figure(fbar_rand));
+% Or, close all:
+close all;
+
+
+
+#### Plotting Resources: 
+- [Types of Matlab plots](https://www.mathworks.com/help/matlab/creating_plots/types-of-matlab-plots.html)
 
 
 ### C7. Comment and save your script
