@@ -212,6 +212,25 @@ Functions are called by using their name and the output/input format specified a
 - You can check changes (before merging them) with: ```git fetch``` ```git diff origin master```
 
 ## E. An introduction to Markdown
+### E1. What is Markdown? 
+Borrowed shamelessly from Github's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) page: 
+``` Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like # or *.
+```
+Markdown uses simple notation to apply simple formatting rules. Since it's pretty much just plain text, it's transferrable and much simpler than marked-up text like HTML or even Word or Google documents. For much of the writing that you do for the web, Markdown is good enough. Github uses Markdown for its documents (this document was created in markdown), as does a variety of other web platforms (Trello, for example). 
+
+Using Markdown in Github lets you create readme files that can use better formatting than a plain text file, but is still readable as plain text -- it's the best of both worlds. 
+
+### E2. Get familiar with Markdown
+1. Using the Github web interface, add some content to your newly-created **readme.md** document. Use the [Mastering Markdown guide](https://guides.github.com/features/mastering-markdown/) as a reference (or other guides on the web) to create a fictional document that contains the following elements: 
+- Headings of a number of different levels
+- bolded, italicized text 
+- insert an image from the web
+- An ordered list
+- A bulleted list
+- A link to another website 
+- A table
+- And finally, an emoji! 
+2. Commit your changes and enjoy the products of your hard work!
 
 ## F. Data analysis challenge
 
