@@ -176,9 +176,9 @@ Functions are called by using their name and the output/input format specified a
 
 ## D. Introduction to [git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and Github
 ### D1. Setting up your git account ([git documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)):
-- Set your name: ```git config --global user.name "John Doe"```
-- Set your email address: ```git config --global user.email johndoe@example.com```
-- Check your settings ```git config --list```
+1. Set your name: ```git config --global user.name "John Doe"```
+2. Set your email address: ```git config --global user.email johndoe@example.com```
+3. Check your settings ```git config --list```
 
 ### D2. How git works
 ![alt text](https://git-scm.com/book/en/v2/images/lifecycle.png "git workflow")
@@ -186,20 +186,24 @@ Functions are called by using their name and the output/input format specified a
 ### D3. Cloning a repository (from Github)
 - Find a repository of interest on Github; Click the **Clone or download** button; Copy the url provided
 - In git, navigate to the directory where you want to clone (download) the repository contents.
-- Clone a repository: ```git clone https://github.com/3IE1/SciComp-2019.git``` (replace with proper url)
+1. Clone the course repository: ```git clone https://github.com/3IE1/SciComp-2019.git``` (replace url for other repos)
 
 ### D4. Checking status, adding and committing changes
-- Check status (i.e. what's been modified): ```git status```
-- Add items to the list of tracked files (individually): ```git add <filename>```
-  - OR Add all items to this list of tracked files: ```git add --all```
-- Commit changes to git (i.e. record changes): ```git commit -m '<enter info on what has changed>'```
-  - OR add and commit all at once: ```git commit -a -m '<enter info on what has changed>'```
+1. Create a new folder in the top directory (i.e. in /Sci-Comp2019/). Name it using your first initial and last name (no spaces)
+2. In the new folder, **right click > create new file > text document**. Rename the file **readme.md**
+- You have now created a markdown 'readme' file. 
+3. Check the status of your repository (i.e. what's been modified): ```git status```
+4. Add items to the list of tracked files (individually): ```git add <filename>```
+- OR Add all items to this list of tracked files: ```git add --all```
+5. Commit changes to git (i.e. record changes): ```git commit -m '<enter a note on what has changed>'```
+- OR add and commit all at once: ```git commit -a -m '<enter a note on what has changed>'```
   
 ### D5. Push changes to a Github repository
-- Ensure that you have permissions to write to the Github repository (must be done in Github)
-- Push changes to a connected Github repository: ```git push origin master```
-  - In this example -- which is the default case -- **origin** specifies the remote (i.e. Github) repository that is the target of your 'push'. **master** specifies the branch of the git repository that you're working on as the source data.
-- Check if there are connected remote repositories: ```git remote -v```
+- Ensure that you have permissions to write to the Github repository of interest (must be done in Github)
+- Jay will have given you permission for the course repo.
+1. Push changes to the target Github repository using the command: ```git push origin master```
+- In this example -- which is the default case -- **origin** specifies the remote (i.e. Github) repository that is the target of your 'push'. **master** specifies the branch of the git repository that you're working on as the source data.
+- To check if there are connected remote repositories use the command: ```git remote -v```
 
 ### D6. Pull changes 
 - If others have pushed changes to the Github repository, you need to **pull** the changes to sync your local directory
@@ -207,6 +211,8 @@ Functions are called by using their name and the output/input format specified a
   - git **pull** actually runs two processes: **fetch** (get changes) and **merge** (place in your directory) 
 - You can check changes (before merging them) with: ```git fetch``` ```git diff origin master```
 
-## E. Data analysis challenge
+## E. An introduction to Markdown
 
-## F. Project wrap-up
+## F. Data analysis challenge
+
+## G. Project wrap-up
