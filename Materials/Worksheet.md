@@ -193,167 +193,100 @@ plot(Calgary.data(:,7),'s-','Color',[0.2 0.3 0.7],'MarkerEdgeColor',[1 0.1 0.1],
 #### Plotting multiple series on a figure
 Notice that each time you plot, you lose the previously plotted data. If you want to keep the previous plotted data, use the command **hold on**. Now, a second series can be plotted on top of it:
 ```
-clf; # clear the figure
+clf; % Use the command 'clf' to clear the figure:
 plot(Calgary.data(:,7),'.','Color',[0.8 0.4 0.5]);
 hold on;```
 plot(Toronto.data(:,7),'bx-');
 ```
 
-1. Plot 
-%%% Exercise:
-% Let's use the 'randi' function to create 5 different sets of 
-% 600 random numbers between 1 and 100:
-rand_num = randi([1,100],600,5);
+#### Legend, title, x and y labels, font size
+The **legend** command adds a legend to the plot. The labels correspond to the order of plotted series in your figure. You can specify the location of the legend on the figure by using the 'Location' keyword, and then specifying a compass direction:
 
-plot(rand_num,'c.-'); % Plots a random series of 600 numbers between 1 and 100
+```legend('Calgary','Toronto','Location','NorthWest');```
+- For more information: ```doc legend```
 
-%%% Clearing a figure:  
-% Use the command 'clf' to clear the figure:
-clf; 
-plot(luck_num,'r.-'); % Makes the line and dots red.
-hold on;
-plot(rand_num(:,1),'c.-'); % Plots the first random series of 600 numbers between 1 and 100
+Set the title using the **title** command. The **FontSize** argument sets the weight of the font
+```title('<name of your plot>','FontSize',14); % font set to 14```
 
-%%% Adding a Legend:
-% The 'legend' command adds a legend to the plot. The labels correspond to
-% the order of plotted series in your figure.
-legend('lucky numbers','random numbers');
-% You can specify the location of the legend on the figure by using the
-% 'Location' keyword, and then specifying a compass direction:
-legend('lucky numbers','random numbers','Location','NorthWest');
+Set the x- and y-labels with the following Commands:
+```
+xlabel('<name of your x-axis variable>','FontSize',14);
+ylabel('<name of your y-axis variable>','FontSize',14);
+```
 
-%%% Title, X and Y labels,  Font Size
-% Set the title using the title command:
-title('Lucky and Random Numbers','FontSize',14);
-% 'FontSize' sets the weight of the font.
+Set the font size of the axes and the legend with:
+```set(gca,'FontSize',14); % The gca stands for 'get current axis'```
 
-% Set the x- and y-labels with the following Commands:
-xlabel('Sample Number','FontSize',14);
-ylabel('Number Value','FontSize',14);
-
-% Set the font size of the axes and the legend with:
-set(gca,'FontSize',14);
-
-% Let's replot this, with all the commands together, as figure 2:
-figure(2);clf;
-plot(luck_num,'r.-'); % Makes the line and dots red.
-hold on;
-plot(rand_num(:,1),'cx-'); % Plots a random series of 600 numbers between 1 and 100
-legend('lucky numbers','random numbers','Location','NorthWest');
-title('Lucky and Random Numbers','FontSize',14);
-xlabel('Sample Number','FontSize',14);
-ylabel('Number Value','FontSize',14);
-set(gca,'FontSize',14);
-
-%% Question
-% Does figure 2 tell us a whole lot about whether or not the 'lucky
-% numbers' are, in fact, random?  Why or why not?  What is the apparent
-% trend in the data?
-
-%%% Sorting 
-% Let's try sorting both sets of numbers from lowest to largest value
-% using the 'sort' command:
-
-%%% Figure Handles
-% Another way specify a figure is to assign it a variable name (you can
-% then recall this figure by referring to its variable name)
+#### Figure Handles
+Another way to specify a figure is to assign it a variable name (you can then recall this figure by referring to its variable name)
+```
 f2b = figure(); 
-luck_num_sort = sort(luck_num);
-rand_num_sort = sort(rand_num);
+plot(Calgary.data(:,7),'.','Color',[0.8 0.4 0.5]);
 figure(f2b); clf;
-plot(luck_num_sort,'r.-','LineWidth',2); % Makes the line and dots red.
-hold on;
-% Let's plot all the random number series on top of our lucky numbers.  
-% Since we're not specifying a column to plot, MATLAB assumes that we want
-% to plot each column as a separate line.  It will give each its own color
-plot(rand_num_sort,'LineWidth',0.5);
-legend('LuckyNumbers','Random1','Random2','Random3','Random4','Random5','Location','NorthWest')
-title('Lucky and Random Numbers','FontSize',14);
-xlabel('Sample Number','FontSize',14);
-ylabel('Number Value','FontSize',14);
-set(gca,'FontSize',14);
+plot(Toronto.data(:,7),'.','Color',[0.8 0.4 0.5]);
+```
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% 7b. Printing Figures:
-% Figures can be saved by either using the 'Save Figure' option in the
-% figure window, or by using the MATLAB function 'print'
-% Note that this will print whichever figure is currently active (last
-% selected).  We can make sure we save the right one by calling figure 2
-% again:
+#### Printing Figures:
+Figures can be saved by either using the 'Save Figure' option in the figure window, or by using the MATLAB function **print**
+- ***Note*** that this will print whichever figure is currently active (last selected).  We can make sure we save the right one by calling figure 2 again:
+```
 figure(f2b)
-print('-dpng',[data_loc 'lucky_random_numbers']); % saves as .png
-print('-dtiff',[data_loc 'lucky_random_numbers']); % saves as .tiff
-print('-djpeg',[data_loc 'lucky_random_numbers']); % saves as .jpg
-% See 
-doc print % for more information about printing figures
+print(f2b,'-dpng',[data_loc 'lucky_random_numbers']); % saves as .png
+print(f2b,'-dtiff',[data_loc 'lucky_random_numbers']); % saves as .tiff
+print(f2b,'-djpeg',[data_loc 'lucky_random_numbers']); % saves as .jpg
+```
+- See ```doc print``` for more information about printing figures
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% 7c) Other Types of plots.
-% There are many types of plots. Highlight either variable in Workspace,
-% and click the dropdown 'plot' menu above to see the different types of
-% plots available.
+#### Closing figures:
+You can close a figure by using the **close** command:
+```close(f2b);```
+- Or you can use ```close all``` to close all figures.
 
-%%% Closing figures:
-% You can close a figure by using the 'close' command:
-close(f2b);
-
-%%% Scatterplot:
-% Can be done similar to a line plot, except that you specify both x and y
-% values:
+#### Scatterplots
+- Scatterplots are created similar to a line plot, except that you specify both x and y values:
+```
 figure(3);
-plot(rand_num(:,1),luck_num,'b.'); % Scatterplot between random (x) and lucky numbers (y)
-title('Random vs. Lucky Numbers','FontSize',14);
+plot(rand(100,1),rand(100.1),'b.'); % Scatterplot between random numbers
+title('Random numbers','FontSize',14);
 xlabel('Random Numbers','FontSize',14);
-ylabel('Lucky Numbers','FontSize',14);
+ylabel('Random Numbers, too','FontSize',14);
 set(gca,'FontSize',14);
+```
 
-%%% Bar Graphs:
-% The command 'bar' is used to make a bar graph:
-% Let's make and compare histograms of the distribution of numbers in 
+#### Other Types of plots.
+There are many types of plots. Highlight either variable in Workspace, and click the dropdown 'plot' menu above to see the different types of plots available. 
+- You can also view [this Matlab page](https://www.mathworks.com/help/matlab/creating_plots/types-of-matlab-plots.html) that shows the types of plots available.
+
+#### Bar Graphs:
+The command **bar** is used to make a bar graph: Let's make and compare histograms of the distribution of numbers in 
 % rand_num and luck_num to see if they are similar (use the 'histc'
 % command')
+```
 doc histc;
 edges = (0:5:100)';
 % Do for Lucky Numbers:
-counts_lucky = histc(luck_num,edges);
+counts_rand = histc(randi(100,100,1),edges);
 fbar_lucky = figure();
-bar(edges+2.5,counts_lucky);
-title('Histogram for Lucky Numbers','FontSize',14);
-xlabel('Value of Lucky Number','FontSize',14);
-ylabel('Count','FontSize',14);
-
-% Do for Random Numbers:
-counts_rand = histc(rand_num,edges);
-fbar_rand = figure();
 bar(edges+2.5,counts_rand);
-title('Histogram for Random Numbers','FontSize',14);
-xlabel('Value of Random Number','FontSize',14);
+title('Histogram for Numbers','FontSize',14);
+xlabel('Value Number','FontSize',14);
 ylabel('Count','FontSize',14);
+```
 
-%%% Closing figures:
-% You can close a figure by using the 'close' command:
-close(figure(fbar_rand));
-% Or, close all:
-close all;
+### C4. Your task
+1. Working in a group of 2-4, work together to identify a number of questions that can be explored with the data. 
+2. Create at least 4 figures (not all of the same type).
 
-
-
-#### Plotting Resources: 
-- [Types of Matlab plots](https://www.mathworks.com/help/matlab/creating_plots/types-of-matlab-plots.html)
-
-
-### C7. Comment and save your script
-- Ensure that you've commented your script so that others understand:
+### C5. Commenting your script
+1. Ensure that you've commented your script so that others understand:
   - Who created this script?
   - What is the general purpose of the script?
   - When was it created?
   - what does each section / lines of code do?
-- Save your script. 
+Save your script. 
 
-### C8. Upload your script to the Github repo
+### C6. Upload your script to the Github repo
 - Using the [Github repo webpage](https://github.com/3IE1/SciComp-2019), upload your script to the /session1-script-upload/ folder.
-
-
 
 
 ## D. Introduction to [git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and Github
