@@ -1,2 +1,2 @@
-# session1-scripts
-Upload location for scripts created during session 1.
+# Climate Comparisons
+Upload location for work completed by groups on day 2.
