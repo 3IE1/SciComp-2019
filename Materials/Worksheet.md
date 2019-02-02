@@ -105,7 +105,6 @@ Functions are called by using their name and the output/input format specified a
 - What does it do? How can we use it? 
 2. Figure out how to use isleapyear from the command line. 
 
-
 ### B7. Control structures and indexing 
 - Create a new blank script
 
@@ -118,7 +117,8 @@ Functions are called by using their name and the output/input format specified a
 #### If statements
 - An 'if' statement evaluates if a condition is met (true) or not met (false), and allows the user to perform different functions based on the outcome.  
   - If the statement is true (condition is met) Matlab will execute whatever commands are below it.  
-  - If it is untrue, it will execute any commands that are below the 'else' statement.
+  - If it is untrue, it will
+ execute any commands that are below the 'else' statement.
   - Just like 'for' loops, 'if' statements have to be closed with an 'end'
 1. Within the existing for loop, add an if statement that checks if two conditions: 
 - That the value of **yr** is a leap year (***hint*** you'll use the output from isleapyear)
@@ -141,25 +141,35 @@ Functions are called by using their name and the output/input format specified a
 
 ## C. Intermediate Matlab
 
-### Getting some test data
+### C1. Getting some test data
 1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory of the computer and unzip it.
-2. Follow along with Jay as he goes through the documentation and explains the scripts and functions.
-
-- ```Calgary = importdata(<path to file>);```
-  - This will load a structure variable with three fields
+2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
+- Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the [Environment Canada pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
+3. Modify and use the **get_EC_Wx** script to download data between 1980 and 2017 for Calgary and Toronto (Pearson) Airports
+- Inspect the downloaded data tables in Excel. 
+4. Open a new script. Load the Calgary and Toronto data in Matlab using the **importdata** function.
+- e.g. ```Calgary = importdata(<path to file>);```
+  - This will load a structure variable with three fields:
     - Calgary.data is the numeric values from the table
-    - 
+    - Calgary.textdata contains any text values from the table
+    - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
 
+### C2. Brainstorming questions to be explored
 - Q1. In Toronto during July of 2005, how many days had a maximum temperature above 25 degrees? 
 - Q2. How much snow 
 
 
 
+### C7. Comment and save your script
+- Ensure that you've commented your script so that others understand:
+  - Who created this script?
+  - What is the general purpose of the script?
+  - When was it created?
+  - what does each section / lines of code do?
+- Save your script. 
 
-
-
-
-### C8. Upload your scripts to 
+### C8. Upload your script to the Github repo
+- Using the [Github repo webpage](https://github.com/3IE1/SciComp-2019), upload your script to the /session1-script-upload/ folder.
 
 
 
