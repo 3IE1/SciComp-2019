@@ -1,4 +1,4 @@
-# Worksheet
+# Day 1 Worksheet
 
 ## A. Course introduction
 Follow along with Jay's introductory presentation to the course.
