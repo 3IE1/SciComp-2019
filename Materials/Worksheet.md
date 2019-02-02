@@ -88,25 +88,7 @@ You've already had a basic introduction to numeric arrays through your work with
 - In the command window, clear all variables from the workspace with the ```clearvars;``` command 
 - Run your script using the 'play' button. Note that you will be required to save it. Save it to the same directory as the rest of your work.
 
-### B6. Control structures and indexing 
-- Create a new blank script
-
-#### For loops
-- Loops are handy when you need to repeat a process many times, such as when reading through many rows or columns of data, or running a process iteratively. 
-- The **for** function allows you to do this. Learn more by typing into the command window: ```doc for;```
-1. In your new script, create a for loop that increments **i** from 1 to 100 by 1. 
-- within the loop, assign 
-
-#### If statements
-- An 'if' statement evaluates if a condition is met (true) or not met (false), and allows the user to perform different functions based on the outcome.  
-  - If the statement is true (condition is met) Matlab will execute whatever commands are below it.  
-  - If it is untrue, it will execute any commands that are below the 'else' statement.
-  - Just like 'for' loops, 'if' statements have to be closed with an 'end'
-1. 
-
-#### Indexing and the 'find' function
-
-### B7. Functions
+### B6. Functions
 A function is similar to a script in that it is a list of commands to be executed.  Where it differs, however, is that functions run within their own personal Workspace (called a 'stack').  By default, internal variables will not be placed in the Workspace, and functions will not be able to 'see' any existing variables in your Workspace.  
 
 You pass data into and out of functions using the function declaration statement at the top of the function. 
@@ -124,10 +106,44 @@ Functions are called by using their name and the output/input format specified a
 2. Figure out how to use isleapyear from the command line. 
 
 
+### B7. Control structures and indexing 
+- Create a new blank script
 
+#### For loops
+- Loops are handy when you need to repeat a process many times, such as when reading through many rows or columns of data, or running a process iteratively. 
+- The **for** function allows you to do this. Learn more by typing into the command window: ```doc for;```
+1. In your new script, create a for loop that increments an index **yr** from 1000 to 2020 by 1. 
+- within the loop, call the isleapyear function, using the value of yr. Set the function to be verbose. 
 
+#### If statements
+- An 'if' statement evaluates if a condition is met (true) or not met (false), and allows the user to perform different functions based on the outcome.  
+  - If the statement is true (condition is met) Matlab will execute whatever commands are below it.  
+  - If it is untrue, it will execute any commands that are below the 'else' statement.
+  - Just like 'for' loops, 'if' statements have to be closed with an 'end'
+1. Within the existing for loop, add an if statement that checks if two conditions: 
+- That the value of **yr** is a leap year (***hint*** you'll use the output from isleapyear)
+- That the value of **yr** is a prime number (***hint*** you'll use the function **isprime**)
+2. If both conditions are met, use the **disp** function to send a message to the command window.
 
+#### Indexing and the 'find' function
+1. Use the **randi** function to create a variable **rand_nums** that is a *10000 x 1* list of random numbers between 1 and 1000
+2. Use the **find** function to create a list of: 
+- All rows where rand_nums are greater than (>) 500
+- All rows where rand_nums is less than or equal to (<=) 100 
+- All rows where rand_nums is between 100 and 700
+- All rows where rand_nums is exactly 999
 
+#### Creating your own function
+3. Finally, make your own function (call it **leap_and_prime**). This function should:
+- take an integer year as input 
+- check if it is a leap year *and* a prime number
+- display a message if both are true.
+
+## C. Intermediate Matlab
+
+### Getting some test data
+1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory of the computer and unzip it.
+2. Follow along with Jay as he goes through the documentation and explains the scripts and functions.
 
 - ```Calgary = importdata(<path to file>);```
   - This will load a structure variable with three fields
@@ -143,45 +159,43 @@ Functions are called by using their name and the output/input format specified a
 
 
 
+### C8. Upload your scripts to 
 
 
 
 
-
-## C. Introduction to [git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and Github
-### C1. Setting up your git account ([git documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)):
+## D. Introduction to [git](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) and Github
+### D1. Setting up your git account ([git documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)):
 - Set your name: ```git config --global user.name "John Doe"```
 - Set your email address: ```git config --global user.email johndoe@example.com```
 - Check your settings ```git config --list```
 
-### C2. How git works
+### D2. How git works
 ![alt text](https://git-scm.com/book/en/v2/images/lifecycle.png "git workflow")
 
-### C3. Cloning a repository (from Github)
+### D3. Cloning a repository (from Github)
 - Find a repository of interest on Github; Click the **Clone or download** button; Copy the url provided
 - In git, navigate to the directory where you want to clone (download) the repository contents.
 - Clone a repository: ```git clone https://github.com/3IE1/SciComp-2019.git``` (replace with proper url)
 
-### C4. Checking status, adding and committing changes
+### D4. Checking status, adding and committing changes
 - Check status (i.e. what's been modified): ```git status```
 - Add items to the list of tracked files (individually): ```git add <filename>```
   - OR Add all items to this list of tracked files: ```git add --all```
 - Commit changes to git (i.e. record changes): ```git commit -m '<enter info on what has changed>'```
   - OR add and commit all at once: ```git commit -a -m '<enter info on what has changed>'```
   
-### C5. Push changes to a Github repository
+### D5. Push changes to a Github repository
 - Ensure that you have permissions to write to the Github repository (must be done in Github)
 - Push changes to a connected Github repository: ```git push origin master```
   - In this example -- which is the default case -- **origin** specifies the remote (i.e. Github) repository that is the target of your 'push'. **master** specifies the branch of the git repository that you're working on as the source data.
 - Check if there are connected remote repositories: ```git remote -v```
 
-### C6. Pull changes 
+### D6. Pull changes 
 - If others have pushed changes to the Github repository, you need to **pull** the changes to sync your local directory
 - Pull changes: ```git pull origin master```
   - git **pull** actually runs two processes: **fetch** (get changes) and **merge** (place in your directory) 
 - You can check changes (before merging them) with: ```git fetch``` ```git diff origin master```
-
-## D. Learning through examples
 
 ## E. Data analysis challenge
 
