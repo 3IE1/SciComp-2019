@@ -28,7 +28,7 @@ Class size cap: 25 students
 | Date | Time | Location |
 |:----|:-----|:----|
 |Saturday, 2-Feb, 2019 | 0930 - 1600 | BSB 241 (and/or Mills Wong Classroom)|
-|Wednesday, 9-Feb, 2019 | 1900 - 2200 | BSB 241 (and/or Mills Wong Classroom)|
+|Wednesday, 6-Feb, 2019 | 1900 - 2200 | BSB 241 (and/or Mills Wong Classroom)|
 
 ## Required materials: 
 Students may be asked to bring a personal laptop computer to the session to facilitate some work that is not possible given the computer lab workstation software. 
