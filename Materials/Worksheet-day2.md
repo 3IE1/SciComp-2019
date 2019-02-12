@@ -21,12 +21,15 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
  - The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy link address'])
 
 ## A1. Prepare for analyses
-1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory of the computer and unzip it.
+1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory (or another directory that you want to work in) on the computer and unzip it.
 
 2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
   - Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the Environment Canada [historical data pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
 
-3. Edit (if necessary) and run the **run_get_EC_Wx** script (which calls the **get_EC_Wx** function), to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel. 
+3. Edit (if necessary) and run the **run_get_EC_Wx** script. This script will execute the **get_EC_Wx** function to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel.  
+  - The one value that you will likely need to change is line 6, which uses the **cd** (change directory) command. You need to edit the string (within the parentheses) to match the path to of your unzipped Ec_Wx folder.   
+    - For example, if you've unzipped the package to **C:\Users\yourname\Documents**, the line should read ```C:\Users\yourname\Documents\Ec_Wx```
+    
 Relevant station codes for the data we'll be downloading: 
   - Winnipeg Intl airport (1938 to 2013): 3698
   - Calgary Intl airport (1953 to 2012): 2205
