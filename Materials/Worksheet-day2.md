@@ -13,14 +13,15 @@ Instructions and resources for Day 2 of Introduction to Scientific Computing.
 
 ## Loading station data
 There are a variety of methods for loading data into Matlab. In this example, we're use the **importdata** function.
-- Load the station data in Matlab using the **importdata** function.
-  - e.g. ```Calgary = importdata('D:\Local\EC_Wx\Data\station2205-1950-2010-daily.csv'); %change the path to match the location of your files```
-    - This will load a structure variable with three fields:
-      - Calgary.data is the numeric values from the table
-      - Calgary.textdata contains any text values from the table
-      - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
-##
+- Load both sets of station data into the Matlab Workspace using the **importdata** function. Be sure to select the proper file - Refer to the [table of station numbers](https://github.com/3IE1/SciComp-2019/blob/master/Materials/deliverable-instructions.md#prepare-for-analyses) to identify the correct station numbers.
+  - e.g for Calgary: ```Calgary = importdata('D:\Local\EC_Wx\Data\station2205-1950-2010-daily.csv'); %change the path to match the location of your files``` 
+  - This will load a structure variable with three fields:
+    - Calgary.data is the numeric values from the table
+    - Calgary.textdata contains any text values from the table
+    - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
 
+## Calculating climate statistics 
+Calculate the mean daily temperature for Calgary between 
 
 ## Plotting and visualizing data
 To create a plot (or to bring up one that exists, use the **figure** command, 
