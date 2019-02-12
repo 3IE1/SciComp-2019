@@ -1,24 +1,27 @@
 # Day 2 Worksheet
 
-## A. Data analysis challenge - overview
-Your goal over the next 3 hours is to achieve the following objectives
+Your goal over the next 3 hours is to achieve the following objectives: 
 1. Follow along with Jay to use scripts in [EC_Wx_tools repository](https://github.com/jasonbrodeur/EC_Wx_tools) to download a variety of weather records for two Canadian cities of interest 
-2. After viewing the data, you will work in a small group to answer the broad question: **"How does climate differ between two locations in Canada?"** by identifying a number of different figures or analyses that can be produced.
-3. You will work with your group to create tables and figures that demonstrate your analysis. 
-4. You will write up your results (and display tables and figures) in Markdown into the proper folder of the course [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
-5. You will upload your commented Matlab script and figures to the same folder of the course repo.
+2. After viewing the data, work in a small group (2 or 3) to answer the broad question: **"How does climate differ between two locations in Canada?"** by identifying a number of different figures or analyses that can be produced.
+3. Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. 
+4. Work with your group to create tables and figures that demonstrate your analysis (see instructions below). 
+5. Write up your results (and display tables and figures) in Markdown in the results.md file in the folder of the course [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to your selected comparison. 6. Into the same folder, upload the following: 
+- Your commented Matlab analysis script 
+- The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy link address'])
 
-### A1. Getting your analysis data
+## A1. Getting your analysis data
 1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory of the computer and unzip it.
 2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
 - Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the [Environment Canada pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
-3. Modify and use the **get_EC_Wx** script to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel. 
+3. Use the **get_EC_Wx** script to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel. 
 Relevant station codes: 
 - Winnipeg Intl airport (1938 to 2013): 3698
 - Calgary Intl airport (1953 to 2012): 2205
 - Toronto (Pearson) Intl airport (1937 to 2013):5097
 - St. John's NL Airport (1942 to 2012): 6720
 - Vancouver Intl Airport (1937 to 2013): 889
+- Montreal (Pierre Elliot Trudeau) Airport (1941 to 2017): 5415
+
 
 4. Claim a pair of cities to investigate according to the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
 - Open a new script. Load the station data in Matlab using the **importdata** function.
