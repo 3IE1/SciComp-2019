@@ -2,17 +2,23 @@
 Instructions and resources for Day 2 of Introduction to Scientific Computing. 
 
 ## Creating a new script 
+- Open a new script. 
+- Save it to your working directory. Give it an appropriate name
+- At the top of the script, add some commented text to communicate the following information: 
+  - What is the name of this script? 
+  - What does it do? 
+  - Who created it? 
+  - When was it created? When was it last modified (if applicable).
+***Note:*** use a ```%``` to comment everything afterwards on a line of code. 
 
-  - Open a new script. Load the station data in Matlab using the **importdata** function.
-  - e.g. ```Calgary = importdata(<path to file>);```
+## Loading station data
+There are a variety of methods for loading data into Matlab. In this example, we're use the **importdata** function.
+- Load the station data in Matlab using the **importdata** function.
+  - e.g. ```Calgary = importdata('D:\Local\EC_Wx\Data\station2205-1950-2010-daily.csv'); %change the path to match the location of your files```
     - This will load a structure variable with three fields:
       - Calgary.data is the numeric values from the table
       - Calgary.textdata contains any text values from the table
       - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
-
-## Loading station data
-
-
 ##
 
 
