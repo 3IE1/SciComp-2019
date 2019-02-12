@@ -26,22 +26,27 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
 2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
   - Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the Environment Canada [historical data pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
 
-3. Edit (if necessary) and run the **run_get_EC_Wx** script. This script will execute the **get_EC_Wx** function to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel.  
+3. Edit (if necessary) and run the **run_get_EC_Wx** script. This script will execute the **get_EC_Wx** function to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. 
   - The one value that you will likely need to change is line 6, which uses the **cd** (change directory) command. You need to edit the string (within the parentheses) to match the path to of your unzipped Ec_Wx folder.   
     - For example, if you've unzipped the package to **C:\Users\yourname\Documents**, the line should read ```C:\Users\yourname\Documents\Ec_Wx```
-    
-Relevant station codes for the data we'll be downloading: 
-  - Winnipeg Intl airport (1938 to 2013): 3698
-  - Calgary Intl airport (1953 to 2012): 2205
-  - Toronto (Pearson) Intl airport (1937 to 2013):5097
-  - St. John's NL Airport (1942 to 2012): 6720
-  - Vancouver Intl Airport (1937 to 2013): 889
-  - Montreal (Pierre Elliot Trudeau) Airport (1941 to 2017): 5415
+
+Once the **run_get_EC_Wx** script runs successfully, view the resulting files in your **\Ec_Wx\Data** folder. Note that the files are labeled with their station code. Relevant station codes for the data we'll be downloading are as follows: 
+
+|Station Name|Station Code|
+|:---|---:|
+|Vancouver Intl Airport|889|
+|Calgary Intl airport|2205|
+|Winnipeg Intl airport|3698|
+|Toronto (Pearson) Intl airport|5097|
+|Montreal (Pierre Elliot Trudeau) Airport|5415|
+|St. John's (NL) Airport|6720|
 
 4. Claim a pair of cities for you (or your group) to investigate.
-  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. Note that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
+  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. Note that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). You will edit the results.md file in the matching folder and upload your final content to it.
   
-  
+## A2. Create a data analysis plan  
+Inspect the downloaded data tables in Excel. 
+
 
   - Open a new script. Load the station data in Matlab using the **importdata** function.
   - e.g. ```Calgary = importdata(<path to file>);```
@@ -50,7 +55,7 @@ Relevant station codes for the data we'll be downloading:
       - Calgary.textdata contains any text values from the table
       - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
 
-## A2. Create a data analysis plan
+
 1. Brainstorm with your peers some questions that could be explored in these datasets, e.g.:
   - How do daily temperature trends differ, generally? 
   - How much snowfall does each city receive in each year?  
