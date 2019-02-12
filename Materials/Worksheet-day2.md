@@ -1,52 +1,63 @@
 # Day 2 Worksheet
+Instructions and resources for Day 2 of Introduction to Scientific Computing. 
 
-Your goal over the next 3 hours is to achieve the following objectives: 
+## Overview and Required Deliverables
+Your goal over the next 3 hours (or working remotely) is to achieve the following objectives: 
 1. Follow along with Jay to use scripts in [EC_Wx_tools repository](https://github.com/jasonbrodeur/EC_Wx_tools) to download a variety of weather records for two Canadian cities of interest 
 2. After viewing the data, work in a small group (2 or 3) to answer the broad question: **"How does climate differ between two locations in Canada?"** by identifying a number of different figures or analyses that can be produced.
 3. Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. 
 4. Work with your group to create tables and figures that demonstrate your analysis (see instructions below). 
-5. Write up your results (and display tables and figures) in Markdown in the results.md file in the folder of the course [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to your selected comparison. 6. Into the same folder, upload the following: 
-- Your commented Matlab analysis script 
-- The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy link address'])
+5. Write up your results (and display tables and figures) in Markdown in the results.md file in the folder of the course [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to your selected comparison.   **Your results must contain:** 
+  - An introductory statement that describes your objectives, and the cities that you're comparing.
+  - A list of the questions you've developed for your analyses.
+  - At least three figures, with caption text beneath them, which explains their content.
+  - At least two tables, caption text above them, which explains their content.
+  - A couple of sentences beneath each figure and table, which communicate the results.
+  - A final paragraph summarizing results. 
+6. Into the same folder, upload the following: 
+ - Your commented Matlab analysis script 
+ - The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy link address'])
 
-## A1. Getting your analysis data
+## A1. Prepare for analyses
 1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory of the computer and unzip it.
-2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
-- Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the [Environment Canada pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
-3. Use the **get_EC_Wx** script to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel. 
-Relevant station codes: 
-- Winnipeg Intl airport (1938 to 2013): 3698
-- Calgary Intl airport (1953 to 2012): 2205
-- Toronto (Pearson) Intl airport (1937 to 2013):5097
-- St. John's NL Airport (1942 to 2012): 6720
-- Vancouver Intl Airport (1937 to 2013): 889
-- Montreal (Pierre Elliot Trudeau) Airport (1941 to 2017): 5415
 
+2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
+  - Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the Environment Canada [historical data pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
+
+3. Edit (if necessary) and run the **run_get_EC_Wx** script (which calls the **get_EC_Wx** function), to download data between 1950 and 2010 for a number of weather stations of interest across Canada, as identified through the Station Inventory document. Inspect the downloaded data tables in Excel. 
+Relevant station codes for the data we'll be downloading: 
+  - Winnipeg Intl airport (1938 to 2013): 3698
+  - Calgary Intl airport (1953 to 2012): 2205
+  - Toronto (Pearson) Intl airport (1937 to 2013):5097
+  - St. John's NL Airport (1942 to 2012): 6720
+  - Vancouver Intl Airport (1937 to 2013): 889
+  - Montreal (Pierre Elliot Trudeau) Airport (1941 to 2017): 5415
 
 4. Claim a pair of cities to investigate according to the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
-- Open a new script. Load the station data in Matlab using the **importdata** function.
-- e.g. ```Calgary = importdata(<path to file>);```
-  - This will load a structure variable with three fields:
-    - Calgary.data is the numeric values from the table
-    - Calgary.textdata contains any text values from the table
-    - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
+  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. 
+  - Open a new script. Load the station data in Matlab using the **importdata** function.
+  - e.g. ```Calgary = importdata(<path to file>);```
+    - This will load a structure variable with three fields:
+      - Calgary.data is the numeric values from the table
+      - Calgary.textdata contains any text values from the table
+      - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
 
-### A2. Creating a data analysis plan
+## A2. Create a data analysis plan
 1. Brainstorm with your peers some questions that could be explored in these datasets, e.g.:
   - How do daily temperature trends differ, generally? 
   - How much snowfall does each city receive in each year?  
   - How do the cities compare in terms of days per year with a temperature > 30 Celsius?
   - Which city has the highest day-to-day temperature ranges (or swings)?
   - What are the monthly mean temperatures for each city?
-2. Ensure that you choose a range of questions that will allow you to create tables and figures. 
+2. Ensure that you choose a range of questions that will allow you to create tables and figures. Your final report must contain: 
+  - 
 3. Collaborate with your group (and Jay) to figure out how to perform the analysis.
-
-### A3. Create a markdown page to show your results
+4. Locate a markdown page to show your results
 - Find the proper folder in the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to the cities that you are comparing. 
 - Within that folder (e.g. calgary-winnipeg), build your results page in the existing **results.md** document using the Github editor 
 - Figures created in Matlab (and exported to .png files) can be uploaded to this same folder and used to host images for your results document.
 
-### A4. Comment your script; upload to github
+## A4. Comment your script; upload to github
 - Comment your script and add it to the proper folder in the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to the cities that you are comparing. 
 
 ## B. Matlab Figure Reference
