@@ -7,7 +7,9 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
 2. After viewing the data, work in a small group (2 or 3) to answer the broad question: **"How does climate differ between two locations in Canada?"** by identifying a number of different figures or analyses that can be produced.
 3. Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. 
 4. Work with your group to create tables and figures that demonstrate your analysis (see instructions below). 
-5. Write up your results (and display tables and figures) in Markdown in the results.md file in the folder of the course [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to your selected comparison.   **Your results must contain:** 
+5. Write up your results (and display tables and figures) in Markdown in the results.md file in the folder of the course [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to your selected comparison.  
+
+**Your results must contain:** 
   - An introductory statement that describes your objectives, and the cities that you're comparing.
   - A list of the questions you've developed for your analyses.
   - At least three figures, with caption text beneath them, which explains their content.
