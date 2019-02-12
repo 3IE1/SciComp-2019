@@ -41,11 +41,13 @@ Once the **run_get_EC_Wx** script runs successfully, view the resulting files in
 |Montreal (Pierre Elliot Trudeau) Airport|5415|
 |St. John's (NL) Airport|6720|
 
-4. Claim a pair of cities for you (or your group) to investigate.
-  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. Note that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). You will edit the results.md file in the matching folder and upload your final content to it.
-  
+4. Claim which two cities you (or your group) will compare for your analyses.
+  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. Note that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). You will edit the results.md file in the matching folder of the Github repo and upload your final content to it.
+
+
 ## A2. Create a data analysis plan  
-Inspect the downloaded data tables in Excel. 
+1. From your **\Ec_Wx\Data** folder, identify the two files that you will use in your analyses. 
+  - Open the files in Excel; explore the structure of the data and the variables that are available. 
 
 
   - Open a new script. Load the station data in Matlab using the **importdata** function.
@@ -56,7 +58,7 @@ Inspect the downloaded data tables in Excel.
       - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
 
 
-1. Brainstorm with your peers some questions that could be explored in these datasets, e.g.:
+2. Brainstorm with your group (or collectively in the class) some questions that could be explored in these datasets. Keep in mind the [requirements]() of your final analyses e.g.:
   - How do daily temperature trends differ, generally? 
   - How much snowfall does each city receive in each year?  
   - How do the cities compare in terms of days per year with a temperature > 30 Celsius?
