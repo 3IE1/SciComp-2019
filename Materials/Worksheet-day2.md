@@ -16,6 +16,7 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
   - At least two tables, caption text above them, which explains their content.
   - A couple of sentences beneath each figure and table, which communicate the results.
   - A final paragraph summarizing results. 
+  - A link to your commented analysis script (included in your submission folder)
 6. Into the same folder, upload the following: 
  - Your commented Matlab analysis script 
  - The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy link address'])
@@ -42,13 +43,37 @@ Once the **run_get_EC_Wx** script runs successfully, view the resulting files in
 |St. John's (NL) Airport|6720|
 
 4. Claim which two cities you (or your group) will compare for your analyses.
-  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. Note that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). You will edit the results.md file in the matching folder of the Github repo and upload your final content to it.
-
+  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. ***Note*** that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
+ - Find the proper folder in the Deliverables folder that corresponds to the cities that you are comparing (e.g. calgary-montreal). **This is where your group will submit their final deliverables.**
+- Within that folder, build your results page in the existing **results.md** document using the Github editor 
+- Figures created in Matlab (and exported to .png files) can be uploaded to this same folder and used to host images for your results document.
+- Your final, commented script will be uploaded here, as well.
 
 ## A2. Create a data analysis plan  
-1. From your **\Ec_Wx\Data** folder, identify the two files that you will use in your analyses. 
+1. From your **\Ec_Wx\Data** folder, identify the two files that correspond to the stations you will use in your analyses. 
   - Open the files in Excel; explore the structure of the data and the variables that are available. 
+  - Note that NaNs appear in the data -- these indicate missing values. 
 
+2. Brainstorm with your group (or collectively in the class) some questions that could be explored in these datasets. Ensure that you choose a range of questions that will allow you to create the tables and figures listed as the [requirements](https://github.com/3IE1/SciComp-2019/blob/master/Materials/Worksheet-day2.md#overview-and-required-deliverables) for your final analyses.  
+
+Some questions might be:
+  - How do daily temperature trends differ between the two cities, generally? 
+  - How much snowfall does each city receive in each year?  
+  - How do the cities compare in terms of days per year with a temperature > 30 Celsius? <0 Celsius?
+  - Which city has the highest day-to-day temperature ranges (or swings)?
+  - What are the monthly mean, minimum, and maximum temperatures for each city? 
+  - Which city is prone to higher winds?
+  
+3. Collaborate with your group (and Jay) to work through the analyses. 
+  - Refer to your [Day 2 Worksheet](https://github.com/3IE1/SciComp-2019/edit/master/Materials/Worksheet-day2.md) for instructions
+
+4. Locate a markdown page to show your results
+- Find the proper folder in the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to the cities that you are comparing. 
+- Within that folder (e.g. calgary-winnipeg), build your results page in the existing **results.md** document using the Github editor 
+- Figures created in Matlab (and exported to .png files) can be uploaded to this same folder and used to host images for your results document.
+- Be sure to comment your Matlab analysis script as you go; upload it to this folder when you are finished, and link to it in your final results. 
+
+## A3. 
 
   - Open a new script. Load the station data in Matlab using the **importdata** function.
   - e.g. ```Calgary = importdata(<path to file>);```
@@ -56,21 +81,6 @@ Once the **run_get_EC_Wx** script runs successfully, view the resulting files in
       - Calgary.data is the numeric values from the table
       - Calgary.textdata contains any text values from the table
       - Calgary.colheaders list the column headers in the same columns as they exist in the table (useful to refer to columns in the data file)
-
-
-2. Brainstorm with your group (or collectively in the class) some questions that could be explored in these datasets. Keep in mind the [requirements]() of your final analyses e.g.:
-  - How do daily temperature trends differ, generally? 
-  - How much snowfall does each city receive in each year?  
-  - How do the cities compare in terms of days per year with a temperature > 30 Celsius?
-  - Which city has the highest day-to-day temperature ranges (or swings)?
-  - What are the monthly mean temperatures for each city?
-2. Ensure that you choose a range of questions that will allow you to create tables and figures. Your final report must contain: 
-  - 
-3. Collaborate with your group (and Jay) to figure out how to perform the analysis.
-4. Locate a markdown page to show your results
-- Find the proper folder in the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to the cities that you are comparing. 
-- Within that folder (e.g. calgary-winnipeg), build your results page in the existing **results.md** document using the Github editor 
-- Figures created in Matlab (and exported to .png files) can be uploaded to this same folder and used to host images for your results document.
 
 ## A4. Comment your script; upload to github
 - Comment your script and add it to the proper folder in the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables) that corresponds to the cities that you are comparing. 
