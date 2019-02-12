@@ -38,8 +38,11 @@ Relevant station codes for the data we'll be downloading:
   - Vancouver Intl Airport (1937 to 2013): 889
   - Montreal (Pierre Elliot Trudeau) Airport (1941 to 2017): 5415
 
-4. Claim a pair of cities to investigate according to the [github repo](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
-  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. 
+4. Claim a pair of cities for you (or your group) to investigate.
+  - Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. Note that these correspond to the folders that have been created in the [Deliverables folder of our course Github repository](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables). 
+  
+  
+
   - Open a new script. Load the station data in Matlab using the **importdata** function.
   - e.g. ```Calgary = importdata(<path to file>);```
     - This will load a structure variable with three fields:
