@@ -1,6 +1,7 @@
 # Day 2 Worksheet
 Instructions and resources for Day 2 of Introduction to Scientific Computing. 
-***Note:*** the instructions provided below are available to you in the form of a Matlab sample script found in the [calgary-montreal example folder](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables/calgary-montreal). **Hint:** you can repurpose as much of this script as you wish.
+## A Note on how to use this document
+**You can use and/or repurpose any of the commands you find below (and in fact, you should!)**. You can copy and paste from a text block into a script, or you can find these instructions as a ready-to-go Matlab sample script in the [calgary-montreal example folder](https://github.com/3IE1/SciComp-2019/tree/master/Deliverables/calgary-montreal). 
 
 ## 1. Creating a new script 
 - Open a new script. 
