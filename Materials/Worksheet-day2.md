@@ -1,5 +1,6 @@
 # Day 2 Worksheet
 Instructions and resources for Day 2 of Introduction to Scientific Computing. 
+***Note:*** the instructions provided below are available to you in the sample script found in the 
 
 ## Creating a new script 
 - Open a new script. 
