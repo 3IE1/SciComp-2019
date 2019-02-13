@@ -17,7 +17,7 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
   - A couple of sentences beneath each figure and table, which communicate the results.
   - A final paragraph summarizing results. 
   - A link to your commented analysis script (included in your submission folder)
-6. Into the same folder, upload the following: 
+6. Use the Github web interface to upload the following items into the same folder:
  - Your commented Matlab analysis script 
  - The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy image address'])
 
