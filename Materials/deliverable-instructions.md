@@ -19,7 +19,7 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
   - A link to your commented analysis script (included in your submission folder)
 6. Into the same folder, upload the following: 
  - Your commented Matlab analysis script 
- - The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy link address'])
+ - The figures you have generated, in png format (***hint:*** use these uploaded figures in your Markdown writeup by linking to them [browse to them in github, right-click > 'Copy image address'])
 
 ## Prepare for analyses
 1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory (or another directory that you want to work in) on the computer and unzip it.
