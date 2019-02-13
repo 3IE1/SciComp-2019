@@ -3,7 +3,7 @@ Instructions for your final deliverable.
 
 ## Overview and Required Deliverables
 Your goal over the next 3 hours (or working remotely) is to achieve the following objectives: 
-1. Follow along with Jay to use scripts in [EC_Wx_tools repository](https://github.com/jasonbrodeur/EC_Wx_tools) to download a variety of weather records for two Canadian cities of interest 
+1. Follow along with Jay to use scripts in [EC_Wx_tools repository](https://github.com/jasonbrodeur/EC_Wx_tools) to download a variety of weather records for two Canadian cities of interest. Full instructions for how to do this is [below](https://github.com/3IE1/SciComp-2019/blob/master/Materials/deliverable-instructions.md#prepare-for-analyses).
 2. After viewing the data, work in a small group (2 or 3) to answer the broad question: **"How does climate differ between two locations in Canada?"** by identifying a number of different figures or analyses that can be produced.
 3. Use [this Google Sheet](https://goo.gl/gUWBrS) to claim a comparison for your group. 
 4. Work with your group to create tables and figures that demonstrate your analysis (see instructions below). 
@@ -23,6 +23,7 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
 
 ## Prepare for analyses
 1. Go to https://github.com/jasonbrodeur/EC_Wx_tools. Click on 'Clone or Download' and Download the zip file to the /Downloads directory (or another directory that you want to work in) on the computer and unzip it.
+  - ***NOTE:*** If things go wrong in Steps 1, 2, or 3 of this section, you can just find and download the station data files from the [Materials\Data folder](https://github.com/3IE1/SciComp-2019/tree/master/Materials/Data) of this repository. 
 
 2. Follow along with Jay as he reviews the documentation and explains the scripts and functions, and how they work.
   - Jay will explain the advantages that these scripts provide compared to downloading individual months/years worth of data through the Environment Canada [historical data pages](http://climate.weather.gc.ca/climate_data/hourly_data_e.html?hlyRange=1953-01-01%7C2013-06-13&dlyRange=1937-11-01%7C2013-06-13&mlyRange=1937-01-01%7C2013-06-01&StationID=5097&Prov=ON&urlExtension=_e.html&searchType=stnName&optLimit=yearRange&StartYear=1840&EndYear=2019&selRowPerPage=25&Line=0&searchMethod=contains&Month=6&Day=13&txtStationName=Pearson&timeframe=1&Year=2013)
