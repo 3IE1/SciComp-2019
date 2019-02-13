@@ -192,7 +192,7 @@ print('-dpng','-r300','Calgary_Tmax_histogram'); % saves as Calgary_precip.png
 % re-plot previous scatterplot:
 figure(5);clf;
 plot(Cal_annual_rain,Cal_annual_snow,'ko');
-title('Annual rainfall vs snowfall, Calgary 1950-2010','FontSize',12);
+title('Annual rainfall vs snowfall, Calgary 1950-2010','FontSize',10);
 xlabel('Annual rainfall','FontSize',14);
 ylabel('Annual snowfall','FontSize',14);
 set(gca,'FontSize',14);
@@ -220,7 +220,7 @@ figure(6);clf;
 % Find rows that aren't NaNs in both vectors
 rows_to_use2 = find(~isnan(Calgary.data(:,4)) & ~isnan(Montreal.data(:,4)));
 plot(Calgary.data(rows_to_use2,4),Montreal.data(rows_to_use2,4),'.','Color',[0.7,0.7,0.7]);
-title('Daily maximum temperature comparison, Calgary-Montreal','FontSize',12);
+title('Daily maximum temperature comparison, Calgary-Montreal','FontSize',10);
 xlabel('T_{max} Calgary (°C)','FontSize',14);
 ylabel('T_{max} Montreal (°C)','FontSize',14);
 set(gca,'FontSize',14);
