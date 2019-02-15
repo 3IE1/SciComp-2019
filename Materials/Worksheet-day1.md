@@ -176,6 +176,10 @@ Functions are called by using their name and the output/input format specified a
   - git **pull** actually runs two processes: **fetch** (get changes) and **merge** (place in your directory) 
 - You can check changes (before merging them) with: ```git fetch``` ```git diff origin master```
 
+### C7. More information
+- [Official git documentation page](https://git-scm.com/book/en/v2/)
+- [The Smart Ways to Correct Mistakes in Git](https://css-tricks.com/the-smart-ways-to-correct-mistakes-in-git/) 
+
 ## D. An introduction to Markdown
 ### D1. What is Markdown? 
 Borrowed shamelessly from Github's [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) page: 
