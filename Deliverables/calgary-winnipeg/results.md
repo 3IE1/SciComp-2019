@@ -14,6 +14,7 @@ These questions are answered using the figures provided below.
 ## Figure 1: Comparing Precipitation in Calgary and Winnipeg 
 ![Calgary_Precip](https://github.com/KausharM/SciComp-2019/blob/patch-1/Deliverables/calgary-winnipeg/Calgary_precip.png)
 ![Winnipeg_Precip](https://github.com/KausharM/SciComp-2019/blob/patch-1/Deliverables/calgary-winnipeg/Winnipeg_precip.png)
+*Figure 1: A comparison of annual rainfall and snowfall in two major Canadian cities: Calgary and Winnipeg, from 1950 – 2010 using two distinct line graphs. The pink square indicates annual rainfall, while the green circle indicates annual snowfall.* 
 
 Using Figure 1, we can observe that for Winnipeg, annual rainfall is greater than annual snowfall for any given year from 1950 - 2010. For Calgary, this is not the case, as around 1966, rainfall reaches 140mm, whereas snowfall is at 165mm. This occurs earlier on for Calgary around 1955, where precipitation in the form of snowfall is greater. In Winnipeg, as seen by the y-axis, there is higher precipitation in the form of rainfall compared to Calgary. When comparing the general trend over each decade for each city, the maximum and minimum precipitation tend to fall within the same five-year time period. 
 
