@@ -12,12 +12,14 @@ These questions are answered using the figures provided below.
 
 # Results from Script 
 ## Figure 1: Comparing Precipitation in Calgary and Winnipeg 
-![Need permission to upload png.](link-to-image)
+![Calgary_Precip](https://github.com/KausharM/SciComp-2019/blob/patch-1/Deliverables/calgary-winnipeg/Calgary_precip.png)
+![Winnipeg_Precip](https://github.com/KausharM/SciComp-2019/blob/patch-1/Deliverables/calgary-winnipeg/Winnipeg_precip.png)
 
 Using Figure 1, we can observe that for Winnipeg, annual rainfall is greater than annual snowfall for any given year from 1950 - 2010. For Calgary, this is not the case, as around 1966, rainfall reaches 140mm, whereas snowfall is at 165mm. This occurs earlier on for Calgary around 1955, where precipitation in the form of snowfall is greater. In Winnipeg, as seen by the y-axis, there is higher precipitation in the form of rainfall compared to Calgary. When comparing the general trend over each decade for each city, the maximum and minimum precipitation tend to fall within the same five-year time period. 
 
 ## Figure 2: Comparing Daily Maximum Temperature in Calgary and Winnipeg 
-![Need permission to upload png.](link-to-image)
+![Calgary_Tmax](https://github.com/KausharM/SciComp-2019/blob/patch-1/Deliverables/calgary-winnipeg/Calgary_Tmax_histogram.png)
+![Winnipeg_Tmax](https://github.com/KausharM/SciComp-2019/blob/patch-1/Deliverables/calgary-winnipeg/Winnipeg_Tmax_histogram.png)
 
 Using the two histograms from Figure 2, daily maximum temperature for Calgary resembles a skewed normal distribution unlike Winnipeg's daily maximum temperatures, which most closely mirrors a bimodal distribution. The greatest number of days for any given temperature is given to Calgary, which has a maximum of 1500 days for a given temperature of 22 degrees Celsius. This contrasts approximately 1275 days for Winnipeg at about the same temperature. The most frequent temperature appears to be the same for both Calgary and Winnipeg. Moreover, cooler conditions below freezing point are more frequent in Winnipeg than in Calgary. The trend for warmer temperatures above 28 degrees Celsius is generally the same for both Calgary and Winnipeg. 
 
