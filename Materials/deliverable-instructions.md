@@ -61,14 +61,15 @@ Questions that could be answered with a figure include:
   - How do daily temperature trends differ between the two cities, generally? 
   - How much snowfall does each city receive in each year?  
   - Which city has the highest day-to-day temperature ranges (or swings)?
-  - What are the monthly mean, minimum, and maximum temperatures for each city? 
   - Which city is prone to higher winds?
 
 Questions that could be answered with a table include: 
+  - What are the monthly mean, minimum, and maximum temperatures for each city? 
   - How do the cities compare in terms of days per year with a temperature > 30 Celsius? <0 Celsius?
 
-|City|Avg days/yr < 0 C | Avg days/yr > 20 C | Avg days/yr > 30 C |
-|:---|---:|---:|
+
+|City|Avg days/yr < 0 C | Avg days/yr > 20 C | Avg days/yr > 30 C|
+|:---|---:|---:|---:|
 |Vancouver|22|70|5|
 |Calgary|103|78|17|
 
