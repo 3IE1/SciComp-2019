@@ -13,7 +13,7 @@ Your goal over the next 3 hours (or working remotely) is to achieve the followin
   - An introductory statement that describes your objectives, and the cities that you're comparing.
   - A list of the questions you've developed for your analyses.
   - At least three figures, with caption text beneath them, which explains their content.
-  - At least two tables, caption text above them, which explains their content.
+  - At least one table, with a caption above it that explains its content.
   - A couple of sentences beneath each figure and table, which communicate the results.
   - A final paragraph summarizing results. 
   - A link to your commented analysis script (included in your submission folder)
@@ -55,7 +55,7 @@ Once the **run_get_EC_Wx** script runs successfully, view the resulting files in
   - Open the files in Excel; explore the structure of the data and the variables that are available. 
   - Note that NaNs appear in the data -- these indicate missing values. 
 
-2. Brainstorm with your group (or collectively in the class) some questions that could be explored in these datasets. Ensure that you choose a range of questions that will allow you to create the tables and figures listed as the [requirements](https://github.com/3IE1/SciComp-2019/blob/master/Materials/Deliverable_Instructions.md#overview-and-required-deliverables) for your final analyses.  
+2. Brainstorm with your group (or collectively in the class) some questions that could be explored in these datasets. Ensure that you choose a range of questions that will allow you to create the tables and figures listed as the [requirements](https://github.com/3IE1/SciComp-2019/blob/master/Materials/deliverable-instructions.md#overview-and-required-deliverables) for your final analyses.  
 
 Some questions might be:
   - How do daily temperature trends differ between the two cities, generally? 
