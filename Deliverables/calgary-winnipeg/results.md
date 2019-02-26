@@ -31,5 +31,15 @@ Using the two histograms from Figure 2, daily maximum temperature for Calgary re
       
 The correlation coefficient using the linear trendline generated in Figure 3 is 0.81607 with a p-value of 0. The correlation between the two daily maximum temperatures is strong. The graph also shows a strong positive linear trend. From the graph, neither city frequently reaches extremes below -30 degrees Celsius or above 35 degrees Celsius. There is also more variation between the two cities at lower temperatures as seen in Figure 3 with the greater dispersion of points. 
 
+## Comparing Annual Precipitation (mm) in Two Major Cities 
+*Table 1: Comparing Annual Precipitation in mm of Rainfall and Snowfall in Calgary and Winnipeg in 2005.*
+
+| City        | Rainfall   | Snowfall |
+| ------------- |:-------------:| -----:|
+| Calgary | 480mm | 75mm |
+| Winnipeg | 525mm | 165mm |
+
+It is evident from Figure 1 and Table 1 that Winnipeg experiences greater precipitation than Calgary, and rainfall is more prevalent than snowfall in both cities. Note that the table only uses data from 2005. 
+
 # Summarizing Results 
 These results indicate similiarities and differences between Calgary and Winnipeg weather. Similarities include trends of increasing and decreasing precipitation around the same timeframe for both Calgary and Winnipeg. Yet, Calgary tends to experience less rainfall in comparison to Winnipeg. In addition, weather data provided insight into daily maximum temperatures for Calgary and Winnipeg. The most frequent temperature for both Calgary and Winnipeg was around 22 degrees Celsius but differences emerged around cooler temperatures. Winnipeg experienced cooler temperatures more frequently than Calgary. Lastly, there was a strong correlation between daily maximum temperatures in Calgary and Winnipeg, which was observed using a linear trendline. 
